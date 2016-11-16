@@ -74,10 +74,7 @@ import com.google.android.exoplayer.MediaCodecUtil;
 import com.google.android.exoplayer.audio.AudioCapabilities;
 import com.google.android.exoplayer.audio.AudioCapabilitiesReceiver;
 import com.google.android.exoplayer.drm.UnsupportedDrmException;
-import com.google.android.exoplayer.metadata.id3.GeobFrame;
 import com.google.android.exoplayer.metadata.id3.Id3Frame;
-import com.google.android.exoplayer.metadata.id3.PrivFrame;
-import com.google.android.exoplayer.metadata.id3.TxxxFrame;
 import com.google.android.exoplayer.text.CaptionStyleCompat;
 import com.google.android.exoplayer.text.Cue;
 import com.google.android.exoplayer.text.SubtitleLayout;
@@ -227,7 +224,7 @@ public class OnlineStreamBroadcastActivity extends AppCompatActivity implements
     private Handler BUFFERING_COUNTER_HANDLER = new Handler();
     private Runnable BUFFERING_COUNTER_RUNNABLE = new Runnable() {
         public void run() {
-//            Log.e(TAG, "Buffer Count : " + BUFFERING_COUNT);
+            Log.e(TAG, "Buffer Count : " + BUFFERING_COUNT);
             if (BUFFERING_COUNT == 15) {
                 BUFFERING_THREAD_IS_RUNNING = false;
                 BUFFERING_COUNTER_HANDLER.removeCallbacks(BUFFERING_COUNTER_RUNNABLE);
@@ -296,6 +293,8 @@ public class OnlineStreamBroadcastActivity extends AppCompatActivity implements
         isFromNotification = getIntent().getBooleanExtra("isFromNotification", false);
         isWebCast = StreamFileName.contains("_360p");
 
+        Log.e(TAG, " isWebCast : " + isWebCast);
+        Log.e(TAG, "Stream file name : " + StreamFileName);
         if (isWebCast)
             setContentView(R.layout.activity_online_stream_webcast);
         else
@@ -935,22 +934,6 @@ public class OnlineStreamBroadcastActivity extends AppCompatActivity implements
     // DemoPlayer.MetadataListener implementation
     @Override
     public void onId3Metadata(List<Id3Frame> id3Frames) {
-        for (Id3Frame id3Frame : id3Frames) {
-            if (id3Frame instanceof TxxxFrame) {
-                TxxxFrame txxxFrame = (TxxxFrame) id3Frame;
-                Log.i(TAG, String.format("ID3 TimedMetadata %s: description=%s, value=%s", txxxFrame.id,
-                        txxxFrame.description, txxxFrame.value));
-            } else if (id3Frame instanceof PrivFrame) {
-                PrivFrame privFrame = (PrivFrame) id3Frame;
-                Log.i(TAG, String.format("ID3 TimedMetadata %s: owner=%s", privFrame.id, privFrame.owner));
-            } else if (id3Frame instanceof GeobFrame) {
-                GeobFrame geobFrame = (GeobFrame) id3Frame;
-                Log.i(TAG, String.format("ID3 TimedMetadata %s: mimeType=%s, filename=%s, description=%s",
-                        geobFrame.id, geobFrame.mimeType, geobFrame.filename, geobFrame.description));
-            } else {
-                Log.i(TAG, String.format("ID3 TimedMetadata %s", id3Frame.id));
-            }
-        }
     }
 
     //extra for demo player and codec
