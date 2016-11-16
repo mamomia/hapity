@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin">
+
+    <com.app.hopity.extra.CircularImageViewSingle
+        android:id="@+id/ivProfilePicFFViewProfileItem"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/my_profile_dummy_new" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tvUsernameFFViewProfileItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/ivProfilePicFFViewProfileItem"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        autofit:minTextSize="10sp" />
+</RelativeLayout>

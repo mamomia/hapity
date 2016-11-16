@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerComment"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/et_comment_selected">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/ivProfilePicComment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:adjustViewBounds="true"
+            android:src="@drawable/my_profile_dummy_new" />
+
+        <ProgressBar
+            android:id="@+id/progressBarComment"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ivProfilePicComment"
+            android:layout_alignEnd="@+id/ivProfilePicComment"
+            android:layout_alignStart="@+id/ivProfilePicComment"
+            android:layout_alignTop="@+id/ivProfilePicComment"
+            android:background="@android:color/transparent"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUsernameComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="\@Loading..."
+            android:textColor="@color/list_background"
+            android:textSize="12sp" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/tvCommentComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:maxLines="4"
+            android:text="Loading..."
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            autofit:minTextSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

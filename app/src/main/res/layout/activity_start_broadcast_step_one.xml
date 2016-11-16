@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayoutStepOneStartBroadcast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90001c02"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/etBroadcastTitleStepOneStartBroadcast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:gravity="top|start"
+                android:hint="Enter Broadcast Title Here"
+                android:inputType="textMultiLine"
+                android:minHeight="50dp"
+                android:minLines="5"
+                android:padding="3dp"
+                android:scrollHorizontally="false"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="#50000000">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnSwitchCameraStepOneStartBroadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/img_switch_cam_step_one" />
+
+                <ImageButton
+                    android:id="@+id/btnLocationShareStepOneStartBroadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginStart="30dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/location_icon_disable" />
+
+                <ImageButton
+                    android:id="@+id/btnTwitterShareStepOneStartBroadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="30dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/twitter_icon_enble" />
+
+                <ImageButton
+                    android:id="@+id/btnFBShareStepOneStartBroadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="30dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/fb_icon_enable" />
+
+                <ImageButton
+                    android:id="@+id/btnCustomImageStepOneStartBroadcast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/image_icon_custom_disable" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnStartStepOneStartBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:text="Start Streaming"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</RelativeLayout>

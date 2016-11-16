@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_people"
+        android:icon="@drawable/img_search"
+        android:orderInCategory="5"
+        android:title="Search People"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:enabled="true"
+        android:key="is_sensitive_settings"
+        android:summary="My broadcast(s) contains sensitive media"
+        android:textStyle="bold"
+        android:title="Sensitive Media" />
+    <SwitchPreference
+        android:enabled="true"
+        android:key="inform_me_settings"
+        android:summary="Do not inform me before showing media that may be sensitive"
+        android:textStyle="bold"
+        android:title="Do not Inform Me" />
+    <SwitchPreference
+        android:enabled="true"
+        android:key="delete_broadcast_settings"
+        android:summary="Delete my broadcast(s) after 24 hours."
+        android:textStyle="bold"
+        android:title="Delete Broadcast(s)" />
+</PreferenceScreen>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <ImageView
+        android:id="@+id/ivImageBroadcastViewProfileItem"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="5dp"
+        android:background="#7a000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_play_white" />
+    </RelativeLayout>
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tvNameViewProfileItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivImageBroadcastViewProfileItem"
+        android:layout_toEndOf="@+id/ivImageBroadcastViewProfileItem"
+        android:layout_toStartOf="@+id/tvStatusBroadcastViewProfileItem"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:padding="2dp"
+        android:singleLine="true"
+        android:text="Best Restaurant in Europe"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        autofit:minTextSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvShareViewProfileItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvNameViewProfileItem"
+        android:layout_below="@+id/tvNameViewProfileItem"
+        android:drawableStart="@drawable/share"
+        android:padding="2dp"
+        android:text=" Share"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvStatusBroadcastViewProfileItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ivImageBroadcastViewProfileItem"
+        android:layout_margin="5dp"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:text="LIVE"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</RelativeLayout>

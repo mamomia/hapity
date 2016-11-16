@@ -1,0 +1,10 @@
+<!-- res/menu/menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_broadcast"
+        android:icon="@android:drawable/stat_notify_sync_noanim"
+        android:orderInCategory="5"
+        android:title="Refresh"
+        app:showAsAction="always" />
+</menu>

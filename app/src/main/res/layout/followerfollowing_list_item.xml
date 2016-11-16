@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/ivProfilePicFFItem"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+    <ProgressBar
+        android:id="@+id/progressBarFFItem"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivProfilePicFFItem"
+        android:layout_alignEnd="@+id/ivProfilePicFFItem"
+        android:layout_alignStart="@+id/ivProfilePicFFItem"
+        android:layout_alignTop="@+id/ivProfilePicFFItem"
+        android:background="@android:color/transparent"
+        android:indeterminate="true"
+        android:visibility="invisible" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tvUsernameFFItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/ivProfilePicFFItem"
+        android:maxLines="1"
+        android:text="Username"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        autofit:minTextSize="10sp" />
+</RelativeLayout>

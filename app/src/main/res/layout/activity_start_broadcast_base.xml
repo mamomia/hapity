@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayoutStartBroadcast"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".streamActivities.StreamBaseActivity">
+
+    <com.app.hopity.streamActivities.AspectFrameLayout
+        android:id="@+id/aspectLayoutStartBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
+
+        <SurfaceView
+            android:id="@+id/surfaceViewStartBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </com.app.hopity.streamActivities.AspectFrameLayout>
+
+    <include layout="@layout/activity_start_broadcast_step_one" />
+
+    <include layout="@layout/activity_start_broadcast_step_two" />
+
+</RelativeLayout>

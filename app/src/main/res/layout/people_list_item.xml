@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <com.pkmmte.view.CircularImageView
+        android:id="@+id/ivProfilePicPeopleItem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/com_facebook_profile_picture_blank_square" />
+
+    <ProgressBar
+        android:id="@+id/progressBarPeopleItem"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivProfilePicPeopleItem"
+        android:layout_alignEnd="@+id/ivProfilePicPeopleItem"
+        android:layout_alignStart="@+id/ivProfilePicPeopleItem"
+        android:layout_alignTop="@+id/ivProfilePicPeopleItem"
+        android:background="@android:color/transparent"
+        android:indeterminate="true" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tvUsernamePeopleItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivProfilePicPeopleItem"
+        android:layout_toEndOf="@+id/ivProfilePicPeopleItem"
+        android:maxLines="2"
+        android:text="Username"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        autofit:minTextSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvNumberFollowersPeopleItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvUsernamePeopleItem"
+        android:layout_below="@+id/tvUsernamePeopleItem"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        android:text="0 Followers"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvNumberFollowingPeopleItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvUsernamePeopleItem"
+        android:layout_below="@+id/tvNumberFollowersPeopleItem"
+        android:layout_marginTop="5dp"
+        android:singleLine="true"
+        android:text="0 Following"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/light_grey"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/ivAddUserPeopleItem"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tvUsernamePeopleItem"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:src="@drawable/img_add_user" />
+
+</RelativeLayout>
